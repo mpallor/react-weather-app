@@ -1,1 +1,89 @@
+.Weather {
+  font-family: "Poppins", sans-serif;
+  background: 0%;
+}
 
+.btn.btn-primary {
+  background-color: #b9d8e8;
+  border-style: none;
+  font-weight: 500;
+}
+
+.Weather .current-position {
+  padding: 0;
+  position: relative;
+  top: 6px;
+  right: 6px;
+  font-size: 28px;
+  background: transparent;
+  color: #b9d8e8;
+  border: none;
+  transition: all 150ms ease-in-out;
+}
+
+.Weather .current-position:hover {
+  color: #0e5ed8;
+}
+
+.Weather h1 {
+  font-weight: 500;
+  font-size: 35px;
+}
+
+.Weather p {
+  opacity: 70%;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+.Weather .date {
+  font-size: 18px;
+  font-weight: 500;
+}
+.Weather ul {
+  list-style: none;
+  position: relative;
+  top: 45px;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+strong {
+  font-weight: 500;
+}
+.Weather img {
+  position: relative;
+  left: -20px;
+}
+
+.temperature {
+  position: relative;
+  top: 20px;
+  right: 35px;
+  margin-right: 0;
+  line-height: 60px;
+  font-size: 58px;
+}
+
+.unit {
+  vertical-align: super;
+  position: relative;
+  right: 28px;
+  top: -5px;
+  font-size: 60%;
+  font-size: 15px;
+}
+.celsius-link {
+  text-decoration: none;
+  color: #b9d8e8;
+}
+.celsius-link:active {
+  color: #0e5ed8;
+}
+
+.fahrenheit-link {
+  text-decoration: none;
+  color: #b9d8e8;
+}
+.fahrenheit-link:active {
+  color: #0e5ed8;
+}
