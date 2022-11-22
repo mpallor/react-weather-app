@@ -41,7 +41,7 @@ export default function FormattedDate(props) {
   let month = months[props.date.getMonth()];
   return (
     <div>
-      {hours}:{minutes} {day}, {dayInMonth} {month}.
+      {hours}:{minutes} {day}, {dayInMonth} {month}
     </div>
   );
 }

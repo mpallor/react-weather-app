@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
+
 import WeatherInfo from "./WeatherInfo";
+
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -15,7 +17,7 @@ export default function Weather(props) {
       city: response.data.city,
       description: response.data.condition.description,
       wind: response.data.wind.speed,
-      feels_like: response.data.temperature.feels_like,
+      feels_like: Math.round(response.data.temperature.feels_like),
       pressure: response.data.temperature.pressure,
       humidity: response.data.temperature.humidity,
       icon: "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png",
@@ -25,6 +27,7 @@ export default function Weather(props) {
   function search() {
     const apiKey = `t543fdb4184e920a39c183c0oaad1529`;
     const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+
     axios.get(apiUrl).then(handleWeather);
   }
 
@@ -34,7 +37,7 @@ export default function Weather(props) {
   }
 
   function handleChange(event) {
-    setCity(event.target.value);
+    setCity(event.traget.value);
   }
 
   if (weatherData.ready) {
@@ -46,10 +49,10 @@ export default function Weather(props) {
               <div className="col-8">
                 <input
                   type="search"
-                  autoComplete="off"
-                  autoFocus="on"
-                  placeholder="Search for a city"
                   className="form-control mt-2"
+                  autocomplete="off"
+                  autofocus="on"
+                  placeholder="Search for a city"
                   onChange={handleChange}
                 ></input>
               </div>
@@ -78,6 +81,7 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading";
+
+    return "Loading...";
   }
 }

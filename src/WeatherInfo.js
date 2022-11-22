@@ -11,10 +11,7 @@ export default function WeatherInfo(props) {
       </h2>
       <div className="row">
         <div className="col-6">
-          <img
-            src={props.data.icon}
-            alt={props.data.condition.description}
-          ></img>
+          <img src={props.data.icon} alt="Cloudy"></img>
 
           <span className="temperature"> {props.data.temperature}</span>
           <span className="unit">
