@@ -20,7 +20,7 @@ export default function Weather(props) {
       feels_like: Math.round(response.data.temperature.feels_like),
       pressure: response.data.temperature.pressure,
       humidity: response.data.temperature.humidity,
-      icon: "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png",
+      icon: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
     });
   }
 
@@ -37,14 +37,14 @@ export default function Weather(props) {
   }
 
   function handleChange(event) {
-    setCity(event.traget.value);
+    setCity(event.target.value);
   }
 
   if (weatherData.ready) {
     return (
       <div className="Weather">
         <div className="container">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="row">
               <div className="col-8">
                 <input
@@ -61,7 +61,6 @@ export default function Weather(props) {
                   type="submit"
                   value="Search"
                   className="btn btn-primary w-100 mt-2"
-                  onSubmit={handleSubmit}
                 ></input>
               </div>
               <div className="col-1">
