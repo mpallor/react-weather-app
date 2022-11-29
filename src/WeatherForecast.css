@@ -7,3 +7,7 @@
   opacity: 0.6;
   margin-left: 5px;
 }
+.img-position {
+  position: relative;
+  left: 20px;
+}

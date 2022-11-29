@@ -4,6 +4,7 @@
   border: 1px solid rgb(218, 220, 224);
   border-radius: 15px;
   padding: 10px 10px 200px;
+  background: white;
 }
 
 @media (prefers-reduced-motion: no-preference) {
